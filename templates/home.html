@@ -1,0 +1,39 @@
+
+<p style="text-align:center;">Cloud Digital Assignment </p>
+<p style="text-align:center;">18BLC1056 - Rashmi Thekkath </p>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title style="text-align:center;">Predict Your Insurance Bill!</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="text-align:center;">Predict Your Insurance Bill!</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form style="text-align:center;" action="{{ url_for('predict')}}"method="POST">
+      <input  style="text-align:center;" type="text" name="age" placeholder="Age" required="required" /><br>
+    	<input style="text-align:center;" type="text" name="sex" placeholder="Sex" required="required" /><br>
+        <input style="text-align:center;" type="text" name="bmi" placeholder="BMI" required="required" /><br>
+        <input style="text-align:center;" type="text" name="children" placeholder="Children" required="required" /><br>
+        <input style="text-align:center;" type="text" name="smoker" placeholder="Smoker" required="required" /><br>
+        <input style="text-align:center;" type="text" name="region" placeholder="Region" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="text-align:center;">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ <p style="text-align:center;">{{pred}}</p>
+</body>
+</html>
